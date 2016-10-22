@@ -25,15 +25,16 @@ unless _.isEmpty(resume.work)
                 else
                   |#{experience.company}
 
-              p.text-muted
+              p.text-muted.js-duration-wrapper
                 small
-                  span.space-right
+                  span.space-right.js-date-range
                     |#{experience.startDate} - #{experience.endDate || 'Present'}
 
                   if experience.duration
                     span
                       i.icon-clock.mr-5
-                      |#{experience.duration}
+                      span.js-duration
+                        |#{experience.duration}
 
               .mop-wrapper.space-bottom!= experience.summary
 
